@@ -103,9 +103,12 @@
             margin-bottom: 20px;
         }
         .speakers .speaker img, .schedule .event img {
-            width: 100px;
-            height: 100px;
-            margin-right: 20px;
+            width: auto; /* Automatically adjusts width */
+            height: 40px; /* Adjusts the height to a small, fixed size */
+            max-height: 40px; /* Ensures height doesn't exceed the set size */
+            max-width: 40px; /* Keeps the icons small */
+            margin-right: 15px; /* Adds spacing between the icon and text */
+            object-fit: contain; /* Ensures the image fits within the container */
         }
         .registration form {
             max-width: 600px;
