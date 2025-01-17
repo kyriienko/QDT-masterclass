@@ -97,12 +97,27 @@
         .about, .speakers, .schedule, .registration, .contact {
             /* Additional styling as needed */
         }
+        .lecturers .lecturer, .schedule .event {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .lecturers .lecturer img, .schedule .event img {
+            width: auto; /* Automatically adjusts width */
+            height: 40px; /* Adjusts the height to a small, fixed size */
+            max-height: 40px; /* Ensures height doesn't exceed the set size */
+            max-width: 40px; /* Keeps the icons small */
+            margin-right: 15px; /* Adds spacing between the icon and text */
+            object-fit: contain; /* Ensures the image fits within the container */
+        }
         .speakers .speaker, .schedule .event {
+            text-align: center;
             display: flex;
             align-items: center;
             margin-bottom: 20px;
         }
         .speakers .speaker img, .schedule .event img {
+            text-align: center;
             width: auto; /* Automatically adjusts width */
             height: 40px; /* Adjusts the height to a small, fixed size */
             max-height: 40px; /* Ensures height doesn't exceed the set size */
@@ -210,48 +225,48 @@
     </section>
 
     <!-- Speakers Section -->
-    <section id="speakers" class="speakers">
+    <section id="lecturers" class="lecturers">
         <div class="container">
             <div class="section-title">
                 <h3>Our Lecturers</h3>
                 <p>Learn from leading experts in quantum simulation and tensor network methods.</p>
             </div>
-            <div class="speaker">
+            <div class="lecturer">
                 <img src="speaker-icon.png" alt="Lecturer">
                 <div>
                     <h4>Prof. Natalia Chepiga (TU Delft, The Netherlands)</h4>
                     <p>Introduction to tensor network methods for condensed matter systems</p>
                 </div>
             </div>
-            <div class="speaker">
+            <div class="lecturer">
                 <img src="speaker-icon.png" alt="Lecturer">
                 <div>
                     <h4>Prof. Zlatko Papic (University of Leeds, UK)</h4>
                     <p>Tensor networks for simulating dynamical systems</p>
                 </div>
             </div>
-            <div class="speaker">
+            <div class="lecturer">
                 <img src="speaker-icon.png" alt="Lecturer">
                 <div>
                     <h4>Prof. Andrew Green (University College London, UK)</h4>
                     <p>Quantum computing and circuit simulation methods inspired by tensor networks</p>
                 </div>
             </div>
-            <div class="speaker">
+            <div class="lecturer">
                 <img src="speaker-icon.png" alt="Lecturer">
                 <div>
                     <h4>Dr. Lachlan Lindoy (National Physical Laboratory, UK)</h4>
                     <p>Hands-on for tree tensor networks: introducing PyTTN for simulating open quantum qystems</p>
                 </div>
             </div>
-            <div class="speaker">
+            <div class="lecturer">
                 <img src="speaker-icon.png" alt="Lecturer">
                 <div>
                     <h4>[TBD] Prof. Mari Carmen Banuls (TU Munich, Germany)</h4>
                     <p>To be confirmed.</p>
                 </div>
             </div>
-            <div class="speaker">
+            <div class="lecturer">
                 <img src="speaker-icon.png" alt="Lecturer">
                 <div>
                     <h4>[TBC] Prof. Simone Montangero (University of Padova, Italy)</h4>
@@ -270,77 +285,77 @@
             </div>
             <div class="speaker">
                 <div>
-                    <h4>Prof. Frank Verstraete(Univ. Cambridge, UK)</h4>
+                    <h4>&#8226; Prof. Frank Verstraete(Univ. Cambridge, UK)</h4>
                 </div>
             </div>
             <div class="speaker">
                 <div>
-                    <h4>Prof. Sougato Bose (UCL, UK)</h4>
+                    <h4>&#8226; Prof. Sougato Bose (UCL, UK)</h4>
                 </div>
             </div>
             <div class="speaker">
                 <div>
-                    <h4>Dr. Fedor Simkovic (IQM, Germany)</h4>
+                    <h4>&#8226; Dr. Fedor Simkovic (IQM, Germany)</h4>
                 </div>
             </div>
             <div class="speaker">
                 <div>
-                    <h4>Dr. Nathan Fitzpatrick (Quantinuum, UK)</h4>
+                    <h4>&#8226; Dr. Nathan Fitzpatrick (Quantinuum, UK)</h4>
                 </div>
             </div>
             <div class="speaker">
                 <div>
-                    <h4>Prof. Viv Kendon (Univ. Strathclyde, UK)</h4>
+                    <h4>&#8226; Prof. Viv Kendon (Univ. Strathclyde, UK)</h4>
                 </div>
             </div>
             <div class="speaker">
                 <div>
-                    <h4>Dr. Constantin Dalyac (Pasqal, France)</h4>
+                    <h4>&#8226; Dr. Constantin Dalyac (Pasqal, France)</h4>
                 </div>
             </div>
             <div class="speaker">
                 <div>
-                    <h4>Dr. Yaroslav Herasymenko (TU Delft, The Netherlands)</h4>
+                    <h4>&#8226; Dr. Yaroslav Herasymenko (TU Delft, The Netherlands)</h4>
                 </div>
             </div>
             <div class="speaker">
                 <div>
-                    <h4>Prof. George Booth (King's College London, UK)</h4>
+                    <h4>&#8226; Prof. George Booth (King's College London, UK)</h4>
                 </div>
             </div>
             <div class="speaker">
                 <div>
-                    <h4>Prof. Andrew Daley (Univ. Oxford, UK; to be confirmed)</h4>
+                    <h4>&#8226; Prof. Andrew Daley (Univ. Oxford, UK; to be confirmed)</h4>
                 </div>
             </div>
             <div class="speaker">
                 <div>
-                    <h4>Dr. Ivano Tavernelli (IBM Zurich, Switzerland; to be confirmed)</h4>
+                    <h4>&#8226; Dr. Ivano Tavernelli (IBM Zurich, Switzerland; to be confirmed)</h4>
                 </div>
             </div>
             <div class="speaker">
                 <div>
-                    <h4>Dr. Stasja Stanisic (Phasecraft, UK; to be confirmed)</h4>
+                    <h4>&#8226; Dr. Stasja Stanisic (Phasecraft, UK; to be confirmed)</h4>
                 </div>
             </div>
             <div class="speaker">
                 <div>
-                    <h4>Dr. Ryan Hanley (ColdQuanta, UK; to be confirmed)</h4>
+                    <h4>&#8226; Dr. Ryan Hanley (ColdQuanta, UK; to be confirmed)</h4>
                 </div>
             </div>
             <div class="speaker">
                 <div>
-                    <h4>Dr. Annabelle Bohrdt (Univ. Regensburg, Germany; to be confirmed)</h4>
+                    <h4>&#8226; Dr. Annabelle Bohrdt (Univ. Regensburg, Germany; to be confirmed)</h4>
                 </div>
             </div>
             <div class="speaker">
                 <div>
-                    <h4>Dr. Stefano Mensa (Hartree Centre, UK; to be confirmed)</h4>
+                    <h4>&#8226; Dr. Stefano Mensa (Hartree Centre, UK; to be confirmed)</h4>
                 </div>
             </div>
             <div class="speaker">
                 <div>
-                    <h4>Dr. Lucile Savary (Ecole Normale, Lyon, France; to be confirmed)</h4>
+                    <h4>&#8226; Dr. Lucile Savary (Ecole Normale, Lyon, France; to be confirmed)</h4>
                 </div>
             </div>
         </div>
