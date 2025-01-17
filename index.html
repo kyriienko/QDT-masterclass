@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quantum Digital Twin Masterclass</title>
+    <!-- Link to external CSS (optional) -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts (optional) -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-
     <style>
         /* Basic Reset */
         * {
@@ -79,7 +81,6 @@
             width: 90%;
             max-width: 1200px;
             margin: auto;
-            text-align: center;
         }
         .section-title {
             text-align: center;
@@ -93,47 +94,37 @@
             font-size: 16px;
             color: #666;
         }
-        ul.centered-bullet-list {
-            list-style-type: disc;
-            list-style-position: inside;
-            text-align: left;
-            display: inline-block;
-            margin: auto;
-            padding-left: 0;
+        .about, .speakers, .schedule, .registration, .contact {
+            /* Additional styling as needed */
         }
-        ul.centered-bullet-list li {
-            text-align: left;
-            padding: 5px 0;
-        }
-        .schedule .event {
+        .lecturers .lecturer, .schedule .event {
+            display: flex;
+            align-items: center;
             margin-bottom: 20px;
         }
-        .schedule .event img {
-            display: block;
-            margin: 0 auto 10px auto;
-            height: 40px;
-            width: auto;
+        .lecturers .lecturer img, .schedule .event img {
+            width: auto; /* Automatically adjusts width */
+            height: 40px; /* Adjusts the height to a small, fixed size */
+            max-height: 40px; /* Ensures height doesn't exceed the set size */
+            max-width: 40px; /* Keeps the icons small */
+            margin-right: 15px; /* Adds spacing between the icon and text */
+            object-fit: contain; /* Ensures the image fits within the container */
         }
-        .schedule .event div {
+        .speakers .speaker, .schedule .event {
             text-align: center;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
         }
-        /* List of lecturers and schedule events */
-    .lecturer, .event {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 20px;
-        text-align: left;
-    }
-    .lecturer img, .event img {
-        width: 40px;
-        height: 40px;
-        margin-right: 15px;
-        object-fit: contain;
-    }
-    .lecturer div, .event div {
-        text-align: left; /* Align text left for better readability */
-    }
+        .speakers .speaker img, .schedule .event img {
+            text-align: center;
+            width: auto; /* Automatically adjusts width */
+            height: 40px; /* Adjusts the height to a small, fixed size */
+            max-height: 40px; /* Ensures height doesn't exceed the set size */
+            max-width: 40px; /* Keeps the icons small */
+            margin-right: 15px; /* Adds spacing between the icon and text */
+            object-fit: contain; /* Ensures the image fits within the container */
+        }
         .registration form {
             max-width: 600px;
             margin: auto;
@@ -163,6 +154,23 @@
             color: #fff;
             text-decoration: underline;
         }
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul li {
+                margin: 10px 0;
+            }
+            .speakers .speaker, .schedule .event {
+                flex-direction: column;
+                text-align: center;
+            }
+            .speakers .speaker img, .schedule .event img {
+                margin: 0 0 10px 0;
+            }
+        }
     </style>
 </head>
 <body>
@@ -188,7 +196,7 @@
         <div class="container">
             <img src="qdt-masterclass-v2.png" alt="Quantum Digital Twin Masterclass">
             <h2>Quantum Simulators and Quantum Digital Twins: The Masterclass</h2>
-            <p>Join us at the National Physical Laboratory on <b>March 4-7, 2025</b>, at the Bushy House.</p>
+            <p>Join us at the National Physical Laboratory on <b></b>March 4-7, 2025</b>, at the Bushy House.</p>
             <a href="#registration">Register Now</a>
         </div>
     </section>
@@ -212,7 +220,7 @@
             </p>
             <p>
                 The tentative programme for the event is to be finalised. Below we list of lecturers for the masterclass and invited speakers.
-            </p>
+            <\p>
         </div>
     </section>
 
@@ -227,80 +235,138 @@
                 <img src="speaker-icon.png" alt="Lecturer">
                 <div>
                     <h4>Prof. Natalia Chepiga (TU Delft, The Netherlands)</h4>
-                    <p><i>Introduction to tensor network methods for condensed matter systems</i></p>
+                    <p>Introduction to tensor network methods for condensed matter systems</p>
                 </div>
             </div>
             <div class="lecturer">
                 <img src="speaker-icon.png" alt="Lecturer">
                 <div>
                     <h4>Prof. Zlatko Papic (University of Leeds, UK)</h4>
-                    <p><i>Tensor networks for simulating dynamical systems</i></p>
+                    <p>Tensor networks for simulating dynamical systems</p>
                 </div>
             </div>
             <div class="lecturer">
                 <img src="speaker-icon.png" alt="Lecturer">
                 <div>
                     <h4>Prof. Andrew Green (University College London, UK)</h4>
-                    <p><i>Quantum computing and circuit simulation methods inspired by tensor networks</i></p>
+                    <p>Quantum computing and circuit simulation methods inspired by tensor networks</p>
                 </div>
             </div>
             <div class="lecturer">
                 <img src="speaker-icon.png" alt="Lecturer">
                 <div>
                     <h4>Dr. Lachlan Lindoy (National Physical Laboratory, UK)</h4>
-                    <p><i>Hands-on for tree tensor networks: introducing PyTTN for simulating open quantum qystems</i></p>
+                    <p>Hands-on for tree tensor networks: introducing PyTTN for simulating open quantum qystems</p>
                 </div>
             </div>
             <div class="lecturer">
                 <img src="speaker-icon.png" alt="Lecturer">
                 <div>
                     <h4>[TBD] Prof. Mari Carmen Banuls (TU Munich, Germany)</h4>
-                    <p><i>To be confirmed</i></p>
+                    <p>To be confirmed.</p>
                 </div>
             </div>
             <div class="lecturer">
                 <img src="speaker-icon.png" alt="Lecturer">
                 <div>
                     <h4>[TBC] Prof. Simone Montangero (University of Padova, Italy)</h4>
-                    <p><i>To be confirmed</i></p>
+                    <p>To be confirmed.</p>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- Speakers Section -->
+<!-- Speakers Section -->
     <section id="speakers" class="speakers">
         <div class="container">
             <div class="section-title">
-                <h3>Invited Speakers</h3>
+                <h3>Invited Speakers:</h3>
                 <p>Listen to the latest advances in the field.</p>
             </div>
-            <ul class="centered-bullet-list">
-                <li>Prof. Frank Verstraete (Univ. Cambridge, UK)</li>
-                <li>Prof. Sougato Bose (UCL, UK)</li>
-                <li>Dr. Fedor Simkovic (IQM, Germany)</li>
-                <li>Dr. Nathan Fitzpatrick (Quantinuum, UK)</li>
-                <li>Prof. Viv Kendon (Univ. Strathclyde, UK)</li>
-                <li>Dr. Constantin Dalyac (Pasqal, France)</li>
-                <li>Dr. Yaroslav Herasymenko (TU Delft, The Netherlands)</li>
-                <li>Prof. George Booth (King's College London, UK)</li>
-                <li>Prof. Andrew Daley (Univ. Oxford, UK; to be confirmed)</li>
-                <li>Dr. Ivano Tavernelli (IBM Zurich, Switzerland; to be confirmed)</li>
-                <li>Dr. Stasja Stanisic (Phasecraft, UK; to be confirmed)</li>
-                <li>Dr. Ryan Hanley (ColdQuanta, UK; to be confirmed)</li>
-                <li>Dr. Annabelle Bohrdt (Univ. Regensburg, Germany; to be confirmed)</li>
-                <li>Dr. Stefano Mensa (Hartree Centre, UK; to be confirmed)</li>
-                <li>Dr. Lucile Savary (Ecole Normale, Lyon, France; to be confirmed)</li>
-            </ul>
+            <div class="speaker">
+                <div>
+                    <h4>&#8226; Prof. Frank Verstraete(Univ. Cambridge, UK)</h4>
+                </div>
+            </div>
+            <div class="speaker">
+                <div>
+                    <h4>&#8226; Prof. Sougato Bose (UCL, UK)</h4>
+                </div>
+            </div>
+            <div class="speaker">
+                <div>
+                    <h4>&#8226; Dr. Fedor Simkovic (IQM, Germany)</h4>
+                </div>
+            </div>
+            <div class="speaker">
+                <div>
+                    <h4>&#8226; Dr. Nathan Fitzpatrick (Quantinuum, UK)</h4>
+                </div>
+            </div>
+            <div class="speaker">
+                <div>
+                    <h4>&#8226; Prof. Viv Kendon (Univ. Strathclyde, UK)</h4>
+                </div>
+            </div>
+            <div class="speaker">
+                <div>
+                    <h4>&#8226; Dr. Constantin Dalyac (Pasqal, France)</h4>
+                </div>
+            </div>
+            <div class="speaker">
+                <div>
+                    <h4>&#8226; Dr. Yaroslav Herasymenko (TU Delft, The Netherlands)</h4>
+                </div>
+            </div>
+            <div class="speaker">
+                <div>
+                    <h4>&#8226; Prof. George Booth (King's College London, UK)</h4>
+                </div>
+            </div>
+            <div class="speaker">
+                <div>
+                    <h4>&#8226; Prof. Andrew Daley (Univ. Oxford, UK; to be confirmed)</h4>
+                </div>
+            </div>
+            <div class="speaker">
+                <div>
+                    <h4>&#8226; Dr. Ivano Tavernelli (IBM Zurich, Switzerland; to be confirmed)</h4>
+                </div>
+            </div>
+            <div class="speaker">
+                <div>
+                    <h4>&#8226; Dr. Stasja Stanisic (Phasecraft, UK; to be confirmed)</h4>
+                </div>
+            </div>
+            <div class="speaker">
+                <div>
+                    <h4>&#8226; Dr. Ryan Hanley (ColdQuanta, UK; to be confirmed)</h4>
+                </div>
+            </div>
+            <div class="speaker">
+                <div>
+                    <h4>&#8226; Dr. Annabelle Bohrdt (Univ. Regensburg, Germany; to be confirmed)</h4>
+                </div>
+            </div>
+            <div class="speaker">
+                <div>
+                    <h4>&#8226; Dr. Stefano Mensa (Hartree Centre, UK; to be confirmed)</h4>
+                </div>
+            </div>
+            <div class="speaker">
+                <div>
+                    <h4>&#8226; Dr. Lucile Savary (Ecole Normale, Lyon, France; to be confirmed)</h4>
+                </div>
+            </div>
         </div>
     </section>
-
+    
     <!-- Schedule Section -->
     <section id="schedule" class="schedule">
         <div class="container">
             <div class="section-title">
                 <h3>Event Schedule</h3>
-                <p>Plan your participation with our preliminary schedule.</p>
+                <p>Plan your participation with our detailed schedule.</p>
             </div>
             <div class="event">
                 <img src="day-icon-1.png" alt="Day 1">
@@ -309,6 +375,7 @@
                     <p>09:00 AM - Opening Remarks</p>
                     <p>10:00 AM - Keynote: The Future of Quantum Computing</p>
                     <p>12:00 PM - Networking Lunch</p>
+                    <!-- Add more schedule items -->
                 </div>
             </div>
             <div class="event">
@@ -318,6 +385,7 @@
                     <p>09:00 AM - Workshop: Creating Your First Digital Twin</p>
                     <p>11:00 AM - Panel Discussion: Challenges and Solutions</p>
                     <p>01:00 PM - Lunch Break</p>
+                    <!-- Add more schedule items -->
                 </div>
             </div>
             <div class="event">
@@ -345,22 +413,21 @@
 
     <!-- Registration Section -->
     <section id="registration" class="registration" style="background-color: #f9f9f9;">
-    <div class="container">
-        <div class="section-title">
-            <h3>Register Now</h3>
-            <p>Secure your spot at the Quantum Digital Twin Masterclass.</p>
+        <div class="container">
+            <div class="section-title">
+                <h3>Register Now</h3>
+                <p>Secure your spot at the Quantum Digital Twin Masterclass.</p>
+            </div>
+            <form action="#" method="post">
+                <input type="text" name="fullname" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="text" name="organization" placeholder="Organization">
+                <textarea name="message" rows="4" placeholder="Any special requirements"></textarea>
+                <textarea name="message" rows="6" placeholder="Please describe your background and motivation for joining the masterclass."></textarea>
+                <button type="submit">Submit Registration</button>
+            </form>
         </div>
-        <form action="mailto:daniel.rodrigo-albert@npl.co.uk" method="post" enctype="text/plain">
-            <input type="text" name="fullname" placeholder="Full Name" required>
-            <input type="email" name="email" placeholder="Email Address" required>
-            <input type="text" name="organization" placeholder="Organization">
-            <textarea name="message" rows="4" placeholder="Any special requirements"></textarea>
-            <textarea name="motivation" rows="6" placeholder="Describe your background and motivation for joining the masterclass."></textarea>
-            <button type="submit">Submit Registration</button>
-        </form>
-    </div>
     </section>
-
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
