@@ -125,6 +125,18 @@
             margin-right: 15px; /* Adds spacing between the icon and text */
             object-fit: contain; /* Ensures the image fits within the container */
         }
+        .centered-bullet-list {
+        list-style-type: disc; /* Use disc bullet points */
+        list-style-position: inside; /* Place bullets inside the container */
+        text-align: center; /* Center-align the text and bullets */
+        padding-left: 0; /* Remove left padding for the list */
+        margin: 0 auto; /* Center the entire list */
+        display: inline-block; /* Ensure the list doesn't stretch */
+        }
+
+        .centered-bullet-list li {
+        display: list-item; /* Keep default list-item behavior */
+        }
         .registration form {
             max-width: 600px;
             margin: auto;
@@ -220,7 +232,7 @@
             </p>
             <p>
                 The tentative programme for the event is to be finalised. Below we list of lecturers for the masterclass and invited speakers.
-            <\p>
+            </p>
         </div>
     </section>
 
@@ -235,42 +247,42 @@
                 <img src="speaker-icon.png" alt="Lecturer">
                 <div>
                     <h4>Prof. Natalia Chepiga (TU Delft, The Netherlands)</h4>
-                    <p>Introduction to tensor network methods for condensed matter systems</p>
+                    <p><i>Introduction to tensor network methods for condensed matter systems</i></p>
                 </div>
             </div>
             <div class="lecturer">
                 <img src="speaker-icon.png" alt="Lecturer">
                 <div>
                     <h4>Prof. Zlatko Papic (University of Leeds, UK)</h4>
-                    <p>Tensor networks for simulating dynamical systems</p>
+                    <p><i>Tensor networks for simulating dynamical systems</i></p>
                 </div>
             </div>
             <div class="lecturer">
                 <img src="speaker-icon.png" alt="Lecturer">
                 <div>
                     <h4>Prof. Andrew Green (University College London, UK)</h4>
-                    <p>Quantum computing and circuit simulation methods inspired by tensor networks</p>
+                    <p><i>Quantum computing and circuit simulation methods inspired by tensor networks</i></p>
                 </div>
             </div>
             <div class="lecturer">
                 <img src="speaker-icon.png" alt="Lecturer">
                 <div>
                     <h4>Dr. Lachlan Lindoy (National Physical Laboratory, UK)</h4>
-                    <p>Hands-on for tree tensor networks: introducing PyTTN for simulating open quantum qystems</p>
+                    <p><i>Hands-on for tree tensor networks: introducing PyTTN for simulating open quantum qystems</i></p>
                 </div>
             </div>
             <div class="lecturer">
                 <img src="speaker-icon.png" alt="Lecturer">
                 <div>
                     <h4>[TBD] Prof. Mari Carmen Banuls (TU Munich, Germany)</h4>
-                    <p>To be confirmed.</p>
+                    <p><i>To be confirmed</i></p>
                 </div>
             </div>
             <div class="lecturer">
                 <img src="speaker-icon.png" alt="Lecturer">
                 <div>
                     <h4>[TBC] Prof. Simone Montangero (University of Padova, Italy)</h4>
-                    <p>To be confirmed.</p>
+                    <p><i>To be confirmed</i></p>
                 </div>
             </div>
         </div>
@@ -280,10 +292,10 @@
     <section id="speakers" class="speakers">
     <div class="container">
         <div class="section-title">
-            <h3>Invited Speakers:</h3>
+            <h3>Invited Speakers</h3>
             <p>Listen to the latest advances in the field.</p>
         </div>
-        <ul style="list-style-type: disc; text-align: center; padding: 0; margin: 0;">
+        <ul class="centered-bullet-list">
             <li>Prof. Frank Verstraete (Univ. Cambridge, UK)</li>
             <li>Prof. Sougato Bose (UCL, UK)</li>
             <li>Dr. Fedor Simkovic (IQM, Germany)</li>
