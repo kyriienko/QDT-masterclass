@@ -112,18 +112,8 @@
         }
         .speakers .speaker, .schedule .event {
             text-align: center;
-            display: flex;
             align-items: center;
             margin-bottom: 20px;
-        }
-        .speakers .speaker img, .schedule .event img {
-            text-align: center;
-            width: auto; /* Automatically adjusts width */
-            height: 40px; /* Adjusts the height to a small, fixed size */
-            max-height: 40px; /* Ensures height doesn't exceed the set size */
-            max-width: 40px; /* Keeps the icons small */
-            margin-right: 15px; /* Adds spacing between the icon and text */
-            object-fit: contain; /* Ensures the image fits within the container */
         }
         .centered-bullet-list {
         list-style-type: disc; /* Use disc bullet points */
@@ -136,6 +126,8 @@
 
         .centered-bullet-list li {
         display: list-item; /* Keep default list-item behavior */
+        text-align: center;
+        align-items: center;
         }
         .registration form {
             max-width: 600px;
@@ -321,7 +313,7 @@
         <div class="container">
             <div class="section-title">
                 <h3>Event Schedule</h3>
-                <p>Plan your participation with our detailed schedule.</p>
+                <p>Plan your participation with our preliminary schedule.</p>
             </div>
             <div class="event">
                 <img src="day-icon-1.png" alt="Day 1">
