@@ -4,9 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quantum Digital Twin Masterclass</title>
-    <!-- Link to external CSS (optional) -->
-    <link rel="stylesheet" href="styles.css">
-    <!-- Google Fonts (optional) -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <style>
         /* Basic Reset */
@@ -81,6 +78,7 @@
             width: 90%;
             max-width: 1200px;
             margin: auto;
+            text-align: center;
         }
         .section-title {
             text-align: center;
@@ -94,40 +92,29 @@
             font-size: 16px;
             color: #666;
         }
-        .about, .speakers, .schedule, .registration, .contact {
-            /* Additional styling as needed */
+        ul.centered-bullet-list {
+            list-style-type: disc;
+            list-style-position: inside;
+            text-align: left;
+            display: inline-block;
+            margin: auto;
+            padding-left: 0;
         }
-        .lecturers .lecturer, .schedule .event {
-            display: flex;
-            align-items: center;
+        ul.centered-bullet-list li {
+            text-align: left;
+            padding: 5px 0;
+        }
+        .schedule .event {
             margin-bottom: 20px;
         }
-        .lecturers .lecturer img, .schedule .event img {
-            width: auto; /* Automatically adjusts width */
-            height: 40px; /* Adjusts the height to a small, fixed size */
-            max-height: 40px; /* Ensures height doesn't exceed the set size */
-            max-width: 40px; /* Keeps the icons small */
-            margin-right: 15px; /* Adds spacing between the icon and text */
-            object-fit: contain; /* Ensures the image fits within the container */
+        .schedule .event img {
+            display: block;
+            margin: 0 auto 10px auto;
+            height: 40px;
+            width: auto;
         }
-        .speakers .speaker, .schedule .event {
+        .schedule .event div {
             text-align: center;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        .centered-bullet-list {
-        list-style-type: disc; /* Use disc bullet points */
-        list-style-position: inside; /* Place bullets inside the container */
-        text-align: center; /* Center-align the text and bullets */
-        padding-left: 0; /* Remove left padding for the list */
-        margin: 0 auto; /* Center the entire list */
-        display: inline-block; /* Ensure the list doesn't stretch */
-        }
-
-        .centered-bullet-list li {
-        display: list-item; /* Keep default list-item behavior */
-        text-align: center;
-        align-items: center;
         }
         .registration form {
             max-width: 600px;
@@ -158,23 +145,6 @@
             color: #fff;
             text-decoration: underline;
         }
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-            nav ul li {
-                margin: 10px 0;
-            }
-            .speakers .speaker, .schedule .event {
-                flex-direction: column;
-                text-align: center;
-            }
-            .speakers .speaker img, .schedule .event img {
-                margin: 0 0 10px 0;
-            }
-        }
     </style>
 </head>
 <body>
@@ -200,114 +170,38 @@
         <div class="container">
             <img src="qdt-masterclass-v2.png" alt="Quantum Digital Twin Masterclass">
             <h2>Quantum Simulators and Quantum Digital Twins: The Masterclass</h2>
-            <p>Join us at the National Physical Laboratory on <b></b>March 4-7, 2025</b>, at the Bushy House.</p>
+            <p>Join us at the National Physical Laboratory on <b>March 4-7, 2025</b>, at the Bushy House.</p>
             <a href="#registration">Register Now</a>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-title">
-                <h3>About the Masterclass</h3>
-                <p>Discover the latest advancements in Quantum Digital Twin technology and its applications across various industries.</p>
-            </div>
-            <p>
-                The Quantum Digital Twin Masterclass aims to bring together specialists in quantum simulation, tensor networks, and quantum materials to explore the 
-                future prospects of large-scale quantum simulators and the development of customized tools for emulating these devices at increasing number of qubits.
-                This event will feature two research-intensive days, bringing leading academics and industry reprepresentatives, to showcase recent advancements in 
-                these fields. The presentations will highlight progress in quantum hardware, software, and methodologies for simulating quantum matter — an area where quantum 
-                computers and simulators are expected to offer advantages. The masterclass will also include two days of lectures tailored for graduate students 
-                and postdocs in quantum technologies and condensed matter physics, providing foundational and advanced insights into these cutting-edge topics. 
-                This unique format combines high-level research discussions with an educational component, reducing the barrier for entering the field
-                and faciliating the exchange of ideas for developing new generations of quantum digital twins.
-            </p>
-            <p>
-                The tentative programme for the event is to be finalised. Below we list of lecturers for the masterclass and invited speakers.
-            </p>
-        </div>
-    </section>
-
     <!-- Speakers Section -->
-    <section id="lecturers" class="lecturers">
+    <section id="speakers" class="speakers">
         <div class="container">
             <div class="section-title">
-                <h3>Our Lecturers</h3>
-                <p>Learn from leading experts in quantum simulation and tensor network methods.</p>
+                <h3>Invited Speakers</h3>
+                <p>Listen to the latest advances in the field.</p>
             </div>
-            <div class="lecturer">
-                <img src="speaker-icon.png" alt="Lecturer">
-                <div>
-                    <h4>Prof. Natalia Chepiga (TU Delft, The Netherlands)</h4>
-                    <p><i>Introduction to tensor network methods for condensed matter systems</i></p>
-                </div>
-            </div>
-            <div class="lecturer">
-                <img src="speaker-icon.png" alt="Lecturer">
-                <div>
-                    <h4>Prof. Zlatko Papic (University of Leeds, UK)</h4>
-                    <p><i>Tensor networks for simulating dynamical systems</i></p>
-                </div>
-            </div>
-            <div class="lecturer">
-                <img src="speaker-icon.png" alt="Lecturer">
-                <div>
-                    <h4>Prof. Andrew Green (University College London, UK)</h4>
-                    <p><i>Quantum computing and circuit simulation methods inspired by tensor networks</i></p>
-                </div>
-            </div>
-            <div class="lecturer">
-                <img src="speaker-icon.png" alt="Lecturer">
-                <div>
-                    <h4>Dr. Lachlan Lindoy (National Physical Laboratory, UK)</h4>
-                    <p><i>Hands-on for tree tensor networks: introducing PyTTN for simulating open quantum qystems</i></p>
-                </div>
-            </div>
-            <div class="lecturer">
-                <img src="speaker-icon.png" alt="Lecturer">
-                <div>
-                    <h4>[TBD] Prof. Mari Carmen Banuls (TU Munich, Germany)</h4>
-                    <p><i>To be confirmed</i></p>
-                </div>
-            </div>
-            <div class="lecturer">
-                <img src="speaker-icon.png" alt="Lecturer">
-                <div>
-                    <h4>[TBC] Prof. Simone Montangero (University of Padova, Italy)</h4>
-                    <p><i>To be confirmed</i></p>
-                </div>
-            </div>
+            <ul class="centered-bullet-list">
+                <li>Prof. Frank Verstraete (Univ. Cambridge, UK)</li>
+                <li>Prof. Sougato Bose (UCL, UK)</li>
+                <li>Dr. Fedor Simkovic (IQM, Germany)</li>
+                <li>Dr. Nathan Fitzpatrick (Quantinuum, UK)</li>
+                <li>Prof. Viv Kendon (Univ. Strathclyde, UK)</li>
+                <li>Dr. Constantin Dalyac (Pasqal, France)</li>
+                <li>Dr. Yaroslav Herasymenko (TU Delft, The Netherlands)</li>
+                <li>Prof. George Booth (King's College London, UK)</li>
+                <li>Prof. Andrew Daley (Univ. Oxford, UK; to be confirmed)</li>
+                <li>Dr. Ivano Tavernelli (IBM Zurich, Switzerland; to be confirmed)</li>
+                <li>Dr. Stasja Stanisic (Phasecraft, UK; to be confirmed)</li>
+                <li>Dr. Ryan Hanley (ColdQuanta, UK; to be confirmed)</li>
+                <li>Dr. Annabelle Bohrdt (Univ. Regensburg, Germany; to be confirmed)</li>
+                <li>Dr. Stefano Mensa (Hartree Centre, UK; to be confirmed)</li>
+                <li>Dr. Lucile Savary (Ecole Normale, Lyon, France; to be confirmed)</li>
+            </ul>
         </div>
     </section>
-    
-<!-- Speakers Section -->
-    <section id="speakers" class="speakers">
-    <div class="container">
-        <div class="section-title">
-            <h3>Invited Speakers</h3>
-            <p>Listen to the latest advances in the field.</p>
-        </div>
-        <ul class="centered-bullet-list">
-            <li>Prof. Frank Verstraete (Univ. Cambridge, UK)</li>
-            <li>Prof. Sougato Bose (UCL, UK)</li>
-            <li>Dr. Fedor Simkovic (IQM, Germany)</li>
-            <li>Dr. Nathan Fitzpatrick (Quantinuum, UK)</li>
-            <li>Prof. Viv Kendon (Univ. Strathclyde, UK)</li>
-            <li>Dr. Constantin Dalyac (Pasqal, France)</li>
-            <li>Dr. Yaroslav Herasymenko (TU Delft, The Netherlands)</li>
-            <li>Prof. George Booth (King's College London, UK)</li>
-            <li>Prof. Andrew Daley (Univ. Oxford, UK; to be confirmed)</li>
-            <li>Dr. Ivano Tavernelli (IBM Zurich, Switzerland; to be confirmed)</li>
-            <li>Dr. Stasja Stanisic (Phasecraft, UK; to be confirmed)</li>
-            <li>Dr. Ryan Hanley (ColdQuanta, UK; to be confirmed)</li>
-            <li>Dr. Annabelle Bohrdt (Univ. Regensburg, Germany; to be confirmed)</li>
-            <li>Dr. Stefano Mensa (Hartree Centre, UK; to be confirmed)</li>
-            <li>Dr. Lucile Savary (Ecole Normale, Lyon, France; to be confirmed)</li>
-        </ul>
-    </div>
-</section>
 
-    
     <!-- Schedule Section -->
     <section id="schedule" class="schedule">
         <div class="container">
@@ -322,7 +216,6 @@
                     <p>09:00 AM - Opening Remarks</p>
                     <p>10:00 AM - Keynote: The Future of Quantum Computing</p>
                     <p>12:00 PM - Networking Lunch</p>
-                    <!-- Add more schedule items -->
                 </div>
             </div>
             <div class="event">
@@ -332,64 +225,7 @@
                     <p>09:00 AM - Workshop: Creating Your First Digital Twin</p>
                     <p>11:00 AM - Panel Discussion: Challenges and Solutions</p>
                     <p>01:00 PM - Lunch Break</p>
-                    <!-- Add more schedule items -->
                 </div>
-            </div>
-            <div class="event">
-                <img src="day-icon-3.png" alt="Day 3">
-                <div>
-                    <h4>Day 3: Advanced Applications and Future Trends</h4>
-                    <p>09:00 AM - Seminar: Integrating AI with Digital Twins</p>
-                    <p>11:00 AM - Case Studies: Success Stories</p>
-                    <p>01:00 PM - Closing Ceremony</p>
-                    <!-- Add more schedule items -->
-                </div>
-            </div>
-            <div class="event">
-                <img src="day-icon-4.png" alt="Day 4">
-                <div>
-                    <h4>Day 3: Advanced Applications and Future Trends</h4>
-                    <p>09:00 AM - Seminar: Integrating AI with Digital Twins</p>
-                    <p>11:00 AM - Case Studies: Success Stories</p>
-                    <p>01:00 PM - Closing Ceremony</p>
-                    <!-- Add more schedule items -->
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Registration Section -->
-    <section id="registration" class="registration" style="background-color: #f9f9f9;">
-    <div class="container">
-        <div class="section-title">
-            <h3>Register Now</h3>
-            <p>Secure your spot at the Quantum Digital Twin Masterclass.</p>
-        </div>
-        <form action="mailto:daniel.rodrigo-albert@npl.co.uk" method="post" enctype="text/plain">
-            <input type="text" name="fullname" placeholder="Full Name" required>
-            <input type="email" name="email" placeholder="Email Address" required>
-            <input type="text" name="organization" placeholder="Organization">
-            <textarea name="message" rows="4" placeholder="Any special requirements"></textarea>
-            <textarea name="motivation" rows="6" placeholder="Describe your background and motivation for joining the masterclass."></textarea>
-            <button type="submit">Submit Registration</button>
-        </form>
-    </div>
-    </section>
-
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-title">
-                <h3>Contact Us</h3>
-                <p>If you have any questions, feel free to reach out.</p>
-            </div>
-            <div class="section-title">
-            <p>Email: <a href="mailto:daniel.rodrigo-albert@npl.co.uk">daniel.rodrigo-albert@npl.co.uk</a></p>
-            <p>Address: National Physical Laboratory, Hampton Road, Teddington, Middlesex TW11 0LW, UK</p>
-            <p>Directions: <a href="https://www.npl.co.uk/find-us">https://www.npl.co.uk/find-us</a></p>
-            <!-- You can also embed a Google Map here if desired -->
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2488.0545349695!2d-0.3439818117474202!3d51.4204248443359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760b003575f69f%3A0x4c42601b19b67614!2sBushy%20House!5e0!3m2!1sen!2suk!4v1737114114318!5m2!1sen!2suk" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </section>
@@ -398,6 +234,5 @@
     <footer>
         <p>&copy; 2025 Quantum Digital Twin Masterclass. All rights reserved.</p>
     </footer>
-
 </body>
 </html>
