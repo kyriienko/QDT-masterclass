@@ -115,9 +115,7 @@
             margin-bottom: 30px;
         }
         .lecturers .lecturer, .schedule .event {
-            display: inline-block;
-            display*: inline; /* ie hack */
-            /* display: flex; */
+            display: flex;
             align-items: center;
             margin-bottom: 20px;
         }
@@ -131,7 +129,8 @@
         }
         .speakers .speaker, .schedule .event {
             text-align: center;
-            display: flex;
+            display: inline-block;
+            /* display*: inline; */
             align-items: center;
             margin-bottom: 20px;
             margin-left: 33%;
