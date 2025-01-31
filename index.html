@@ -115,7 +115,9 @@
             margin-bottom: 30px;
         }
         .lecturers .lecturer, .schedule .event {
-            display: flex;
+            display: inline-block;
+            display*: inline; /* ie hack */
+            /* display: flex; */
             align-items: center;
             margin-bottom: 20px;
         }
